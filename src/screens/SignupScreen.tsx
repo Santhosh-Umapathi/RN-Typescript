@@ -1,11 +1,7 @@
 import React, {useState, FC} from 'react';
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import {Button, Input} from '../components';
-
-interface SignupScreenProps {
-  navigation: {navigate: (arg: string) => void};
-  route: object;
-}
+import {SignupScreenProps} from '../types/screens';
 
 const SignupScreen: FC<SignupScreenProps> = ({navigation}) => {
   const [email, setEmail] = useState<string>('Jack.Sparrow@pirates.com');
@@ -13,12 +9,12 @@ const SignupScreen: FC<SignupScreenProps> = ({navigation}) => {
 
   const signupHandler = (): void => {
     console.log(email, password);
-    navigation.navigate('Home');
+    navigation.navigate('Home', {});
   };
 
   const goToLogin = (): void => {
     console.log(email, password);
-    navigation.navigate('Login');
+    navigation.navigate('Login', {});
   };
 
   return (

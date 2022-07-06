@@ -1,12 +1,7 @@
 import React, {useState, FC} from 'react';
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import {Button, Input} from '../components';
-
-//TODO: Fix better type checking
-interface LoginScreenProps {
-  navigation: {navigate: (arg: string) => void};
-  route: object;
-}
+import {LoginScreenProps} from '../types/screens';
 
 const LoginScreen: FC<LoginScreenProps> = ({navigation}) => {
   const [email, setEmail] = useState<string>('Jack.Sparrow@pirates.com');
@@ -14,12 +9,12 @@ const LoginScreen: FC<LoginScreenProps> = ({navigation}) => {
 
   const loginHandler = (): void => {
     console.log(email, password);
-    navigation.navigate('Home');
+    navigation.navigate('Home', {});
   };
 
   const goToSignup = (): void => {
     console.log(email, password);
-    navigation.navigate('Signup');
+    navigation.navigate('Signup', {});
   };
 
   return (

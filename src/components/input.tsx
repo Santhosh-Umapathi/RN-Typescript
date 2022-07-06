@@ -1,12 +1,12 @@
 import React, {FC} from 'react';
 import {TextInput, StyleSheet} from 'react-native';
 
-interface Props {
+type Props = {
   placeholder: string;
   onChangeText: (text: string) => void;
   value: string;
   secureTextEntry?: boolean;
-}
+};
 
 const Input: FC<Props> = ({
   placeholder = 'Enter text',

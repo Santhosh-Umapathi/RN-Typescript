@@ -7,8 +7,9 @@ import {
 } from '../screens';
 
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {RootStackParamList} from '../types/navigator';
 
-const AuthStackNavigator = createNativeStackNavigator();
+const AuthStackNavigator = createNativeStackNavigator<RootStackParamList>();
 
 const AuthStack: FC = () => {
   return (

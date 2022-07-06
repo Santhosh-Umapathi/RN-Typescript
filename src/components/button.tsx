@@ -1,12 +1,12 @@
 import React, {FC} from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
 
-interface ButtonProps {
+type Props = {
   title: string;
   onPress: () => void;
-}
+};
 
-const Button: FC<ButtonProps> = ({title, onPress}) => {
+const Button: FC<Props> = ({title, onPress}) => {
   return (
     <TouchableOpacity
       activeOpacity={0.8}
