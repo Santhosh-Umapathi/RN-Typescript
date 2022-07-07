@@ -8,6 +8,7 @@ import {
 
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {RootStackParamList} from '../types/navigator';
+import {View} from 'react-native';
 
 const AuthStackNavigator = createNativeStackNavigator<RootStackParamList>();
 
@@ -39,6 +40,42 @@ const AuthStack: FC = () => {
         <AuthStackNavigator.Screen
           name="Dashboard"
           component={DashboardScreen}
+          options={{
+            gestureEnabled: true,
+            headerLeft: () => (
+              <>
+                <View
+                  style={{
+                    width: 5,
+                    height: 10,
+                    backgroundColor: 'red',
+                    position: 'absolute',
+                    top: -2,
+                    left: 0,
+                  }}
+                />
+                <View
+                  style={{
+                    width: 20,
+                    height: 3,
+                    backgroundColor: 'red',
+                    borderTopLeftRadius: 50,
+                    borderBottomLeftRadius: 50,
+                  }}
+                />
+                <View
+                  style={{
+                    width: 5,
+                    height: 10,
+                    backgroundColor: 'red',
+                    position: 'absolute',
+                    bottom: -2,
+                    left: 0,
+                  }}
+                />
+              </>
+            ),
+          }}
         />
       </AuthStackNavigator.Group>
     </AuthStackNavigator.Navigator>

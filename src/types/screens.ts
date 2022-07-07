@@ -1,10 +1,17 @@
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {RootStackParamList} from './navigator';
 
-type LoginScreen = NativeStackNavigationProp<RootStackParamList, 'Login'>;
-type SignupScreen = NativeStackNavigationProp<RootStackParamList, 'Signup'>;
-type HomeScreen = NativeStackNavigationProp<RootStackParamList, 'Home'>;
-type DashboardScreen = NativeStackNavigationProp<
+export type LoginScreen = NativeStackNavigationProp<
+  RootStackParamList,
+  'Login'
+>;
+export type SignupScreen = NativeStackNavigationProp<
+  RootStackParamList,
+  'Signup'
+>;
+export type HomeScreen = NativeStackNavigationProp<RootStackParamList, 'Home'>;
+
+export type DashboardScreen = NativeStackNavigationProp<
   RootStackParamList,
   'Dashboard'
 >;

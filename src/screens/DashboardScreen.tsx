@@ -1,4 +1,4 @@
-import React, {useState, useEffect, FC} from 'react';
+import React, {FC} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 
 const DashboardScreen: FC = () => {
